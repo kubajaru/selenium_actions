@@ -23,3 +23,14 @@ jobs:
         
     - name: Test with Maven
       run: mvn clean test
+      
+    - name: Send mail
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
+        subject: Github Actions job result
+        to: obiwan@example.com,yoda@example.com
+        body: Test job of ${{github.repository}} completed successfully!
