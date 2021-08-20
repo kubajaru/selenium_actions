@@ -32,5 +32,6 @@ jobs:
         username: ${{secrets.MAIL_USERNAME}}
         password: ${{secrets.MAIL_PASSWORD}}
         subject: Github Actions job result
-        to: obiwan@example.com,yoda@example.com
+        to: kubajaru@gmail.com
+        from: Jan
         body: Test job of ${{github.repository}} completed successfully!
