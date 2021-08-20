@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Complex UI test suite">
+
+    <test name="Sort table by last name">
+        <parameter name="url" value="http://the-internet.herokuapp.com/tables#edit"/>
+        <parameter name="person1" value="Bach Frank fbach@yahoo.com $51.00 http://www.frank.com"/>
+        <parameter name="person2" value="Doe Jason jdoe@hotmail.com $100.00 http://www.jdoe.com"/>
+        <parameter name="person3" value="Smith John jsmith@gmail.com $50.00 http://www.jsmith.com"/>
+        <parameter name="person4" value="Conway Tim tconway@earthlink.net $50.00 http://www.timconway.com"/>
+        <classes>
+            <class name="DataTablesPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Swap boxes">
+        <parameter name="url" value="http://the-internet.herokuapp.com/drag_and_drop"/>
+        <classes>
+            <class name="DragAndDropPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Select option from dropdown">
+        <parameter name="url" value="http://the-internet.herokuapp.com/dropdown"/>
+        <parameter name="index" value="1"/>
+        <classes>
+            <class name="DropdownPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Change visibility of checkbox">
+        <parameter name="url" value="http://the-internet.herokuapp.com/dynamic_controls"/>
+        <parameter name="timeLimit" value="5"/>
+        <classes>
+            <class name="DynamicControlsPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Close entry ad">
+        <parameter name="url" value="http://the-internet.herokuapp.com/entry_ad"/>
+        <classes>
+            <class name="EntryAdPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Open js alert">
+        <parameter name="url" value="http://the-internet.herokuapp.com/javascript_alerts"/>
+        <classes>
+            <class name="JsAlertsPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Sign in">
+        <parameter name="url" value="http://the-internet.herokuapp.com/login"/>
+        <parameter name="username" value="tomsmith"/>
+        <parameter name="password" value="SuperSecretPassword!"/>
+        <classes>
+            <class name="LoginPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Move slider to right by 2 steps">
+        <parameter name="url" value="http://the-internet.herokuapp.com/horizontal_slider"/>
+        <classes>
+            <class name="SliderPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Write to editor">
+        <parameter name="url" value="http://the-internet.herokuapp.com/tinymce"/>
+        <parameter name="initialValue" value="Your content goes here."/>
+        <parameter name="testValue" value="test"/>
+        <classes>
+            <class name="TinyMCEPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Upload file">
+        <parameter name="url" value="http://the-internet.herokuapp.com/upload"/>
+        <parameter name="filePath" value="C:\Users\j.jaruga\Desktop\qa-mastery\week6\test.txt"/>
+        <classes>
+            <class name="UploadPageTest"/>
+        </classes>
+    </test>
+
+</suite>
