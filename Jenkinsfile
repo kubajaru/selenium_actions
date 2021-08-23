@@ -3,21 +3,11 @@ pipeline {
     tools{
         maven "Maven"
     }
-    stages{
-        stage("build") {
-            steps{
-                echo "Building project"
-                sh '''
-                    cd week6
-                    mvn clean compile
-                '''
-            }
-        }
+    stages {
         stage("test") {
             steps{
                 echo "Starting tests"
                 sh '''
-                    cd week6
                     mvn test
                 '''
             }
